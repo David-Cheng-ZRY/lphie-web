@@ -22,9 +22,7 @@ next-env.d.ts
 
 
 # Addtional
-venv/
 .venv/
-__pycache__/
 .swc/
 *.pyc
 *.pyo
