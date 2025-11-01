@@ -1,0 +1,34 @@
+.Class{
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.ClassName{
+    color: var(--royal-blue4);
+    font-weight: bolder;
+    font-size: 30px;
+    /* line-height: 39px; */
+}
+.Semester{
+    color: var(--royal-blue2);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 39px;
+}
+.Line {
+    margin: 0 auto;  /* this actually centers the container */
+}
+.Brother {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: left; /* keeps text inside left-aligned */
+}
+
+/* Phone(M)- */
+@media (max-width: 321px){
+    .Brother{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

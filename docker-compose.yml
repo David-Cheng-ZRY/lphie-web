@@ -1,0 +1,21 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    # tag: python-api
+    container_name: lphie-python-api
+    
+    ports:
+      - "8000:8000"
+  
+  frontend:
+    build:
+      context: ./frontend
+    # image: host
+    container_name: lphie-next-js
+    ports:
+      - '3000:3000'
+    environment:
+      - API_URL=http://backend:8000

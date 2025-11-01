@@ -1,0 +1,83 @@
+.activeHead{
+    text-align: center;
+    /* font-size: 50px; */
+    /* font-weight: bold; */
+}
+.activeHeader2{
+    text-align: center;
+    font-size: var(--margin-xl);
+    font-weight: bold;
+}
+.activeHeader3{
+    font-size: var(--margin-l);
+    line-height: var(--margin-l);
+    /* font-weight: normal; */
+}
+.graybox{
+    background-color: var(--gray95);
+    padding: 5% 24% 8% 24%;
+    height: fit-content;
+}
+.whitebox{
+    padding: 5% 24% 8% 24%;
+    height: fit-content;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.itemPres{
+    text-align: center;
+    flex: 0 0 100%;
+    padding: 5% 0 0 0;
+}
+.itemExec{
+    text-align: center;
+    flex: 0 0 50%;
+    padding: 5% 0 0 0;
+}
+.itemMinor{
+    text-align: center;
+    flex: 0 0 33%;
+    padding: 5% 0 0 0;
+}
+.itemMinor:nth-last-child(2):first-child,
+.itemMinor:nth-last-child(2):nth-child(2) {
+    flex: 0 0 50%;
+}
+.itemMinor:last-child:nth-child(3n + 1) {
+    flex: 0 0 100%;
+}
+
+/* Phone- */
+@media (max-width: 426px){
+    .graybox{
+        padding: 5% 8% 8% 8%;
+        font-size: 14px;
+    }
+    .whitebox{
+        padding: 5% 8% 8% 8%;
+        font-size: 14px;
+
+    }
+    .itemMinor{
+        text-align: center;
+        flex: 0 0 50%;
+        padding: 5% 0 0 0;
+    }
+}
+/* Tablet (max usually at 768px, ) */ 
+@media (max-width: 1030px) and (min-width: 426px){
+    .graybox{
+        padding: 5% 12% 8% 12%;
+    }
+    .whitebox{
+        padding: 5% 12% 8% 12%;
+    }
+    .itemMinor{
+        text-align: center;
+        flex: 0 0 50%;
+        padding: 5% 0 0 0;
+    }
+} 

@@ -1,0 +1,49 @@
+.recruitmentImage img{
+    width: 60%;
+    height: 60%;
+}
+.header1{
+    font-weight: normal;
+    padding: 0 24%;
+}
+.header2{
+    font-weight: normal;
+}
+.whitebox{
+    height: fit-content;
+    padding: 1.25% 24%;
+}
+.recruitmentImage{
+    display: flex;
+    flex-direction: row;
+    width: 36%;
+    justify-content: center;
+    margin: 50px auto; 
+    gap: 10%;
+}   
+/* Phone- */
+@media (max-width: 426px){
+    .recruitmentImage{
+        width: 70%;
+        gap: 10%;
+    }
+    .header1{
+        padding: 0 8%;
+    }
+    .whitebox{
+        padding: 3% 8%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) and (min-width: 426px){
+    .recruitmentImage{
+        width: 70%;
+        gap: 7.5%;
+    }
+    .header1{
+        padding: 0 12%;
+    }
+    .whitebox{
+        padding: 1.25% 12%;
+    }
+}
