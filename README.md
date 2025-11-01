@@ -5,4 +5,4 @@ This repository contains the source code for the official website of Lambda Phi 
 ## 🌐 Live Website
 
 You can visit the live version of the site here:  
-👉 \[https://uconnlambdaphiepsilon.com\]
+👉 [https://uconnlambdaphiepsilon.com]
