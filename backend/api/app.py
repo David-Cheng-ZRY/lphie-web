@@ -39,6 +39,7 @@ with app.app_context():
     class BrotherModel(db.Model): __table__ = db.metadata.tables["Brothers"]
     class CrossingModel(db.Model): __table__ = db.metadata.tables["Crossing"]    
     class ChapterModel(db.Model): __table__ = db.metadata.tables["Chapters"]
+    class PositionsModel(db.Model): __table__ = db.metadata.tables["Positions"]
     
     pprint(roster)
 
@@ -68,7 +69,31 @@ class RosterResource(Resource):
         return list(crossing_lookup.values())
 
        
+class ActiveResource(Resource):
+    @marshal_with(activeFields)
+    def get(self):
+        positions = PositionsModel.query.all()
+        brothers = BrotherModel.query.all()
 
+        brother_lookup = {
+            b.Number: b for b in brothers
+        }
+        result_data = []
+        for p in positions:
+            bro_i_obj = brother_lookup.get(p.bro_i)
+            bro_ii_obj = brother_lookup.get(p.bro_ii)
+            bro_iii_obj = brother_lookup.get(p.bro_iii)
+            position_dict = {
+                "pos_id": p.pos_id,
+                "title": p.title,
+                "bro_i": bro_i_obj, 
+                "bro_ii": bro_ii_obj,
+                "bro_iii": bro_iii_obj,
+                "executive": p.executive
+            }
+            result_data.append(position_dict)
+
+        return result_data
 
 class CrossingResource(Resource):
     @marshal_with(crossingFields)
@@ -86,6 +111,7 @@ class ChaptersResource(Resource):
 api.add_resource(RosterResource, "/roster")
 api.add_resource(CrossingResource, "/crossing")
 api.add_resource(ChaptersResource, "/chapters")
+api.add_resource(ActiveResource, "/active")
 
 @app.route("/")
 def home():

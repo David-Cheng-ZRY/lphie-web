@@ -6,6 +6,7 @@ crossingFields = {
     'Class': fields.String,
     'Semester': fields.String
 }
+
 # Request Parsers
 crossing_parser = reqparse.RequestParser()
 crossing_parser.add_argument('Crossing_Order', type=int, required=True, help="Hint: Charter Class is 0")
