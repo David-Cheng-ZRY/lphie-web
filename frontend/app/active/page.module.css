@@ -27,14 +27,14 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.itemPres{
-    text-align: center;
-    flex: 0 0 100%;
-    padding: 5% 0 0 0;
-}
 .itemExec{
     text-align: center;
     flex: 0 0 50%;
+    padding: 5% 0 0 0;
+}
+.itemExec:first-child{
+    text-align: center;
+    flex: 0 0 100%;
     padding: 5% 0 0 0;
 }
 .itemMinor{
